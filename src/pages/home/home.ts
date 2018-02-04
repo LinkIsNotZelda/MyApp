@@ -26,7 +26,7 @@ export class HomePage {
     this.boto = "Molt bé !!!";
     this.color = "danger";
 
-    if(name) this.showName = true;
+    if(this.name) this.showName = true;
   }
 
   gotoAbout(event) {

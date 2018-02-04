@@ -14,5 +14,91 @@
 
 
 <ion-content padding>
+  <h3> &nbsp; {{expression}} </h3>
+
+  <ion-grid>
+    <ion-row>
+
+        <ion-col *ngFor="let n of ['1', '2', '3', '/', '4', '5', '6', '*', 7, 8, 9, '-', '0', 'AC', '=', '+']" col-3>
+            <button ion-button round (click)="doCalc(n)" [color]="color">
+                {{ n }}
+            </button>
+        </ion-col>
+      
+
+      <!--
+      <ion-col *ngFor="let n of [1,2,3]" col-3>
+          <button ion-button round (click)="logEventNum(n)" [color]="color">
+              {{ n }}
+          </button>
+      </ion-col>
+      <ion-col  col-3>
+        <button ion-button round (click)="logEventOp('/')" [color]="color">
+            /
+          </button>
+      </ion-col>
+      </ion-row>
+
+      <ion-row>
+
+      <ion-col *ngFor="let n of [4,5,6]" col-3>
+        <button ion-button round (click)="logEventNum(n)" [color]="color">
+            {{ n }}
+        </button>
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button round (click)="logEventOp('*')" [color]="color">
+            *
+          </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col *ngFor="let n of [7,8,9]" col-3>
+        <button ion-button round (click)="logEventNum(n)" [color]="color">
+            {{ n }}
+        </button>
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button round (click)="logEventOp('-')" [color]="color">
+            -
+          </button>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-3>
+      <button ion-button round (click)="logEventNum(0)" [color]="color">
+        0
+      </button>
+      </ion-col>
+
+      <ion-col col-3>
+          <button ion-button round (click)="logEventOp('C')" [color]="color">
+            AC
+          </button>
+        </ion-col>
+
+        <ion-col col-3>
+            <button ion-button round (click)="logEventOp('=')" [color]="color">
+                =
+              </button>
+          </ion-col>
+
+      <ion-col col-3>
+        <button ion-button round (click)="logEventOp('+')" [color]="color">
+            +
+          </button>
+      </ion-col>
+    -->
+      
+    </ion-row>
+  </ion-grid>
+
+  <h3 *ngIf="showRes">Resultat: {{res}}</h3>
+
 
 </ion-content>

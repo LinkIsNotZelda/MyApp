@@ -47,7 +47,7 @@ export class CalcPage {
   logEventOp(op){
 
     
-      if(op=='C'){
+      if(op=='AC'){
         this.res=0;
         this.num1='';
         this.operation="None";
